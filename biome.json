@@ -1,0 +1,17 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.4.0/schema.json",
+  "files": {
+    "ignore": ["**/dist", "**/*.html"]
+  },
+  "formatter": {
+    "indentStyle": "space",
+    "indentWidth": 2
+  },
+  "linter": {
+    "rules": {
+      "suspicious": {
+        "noEmptyInterface": "off"
+      }
+    }
+  }
+}
