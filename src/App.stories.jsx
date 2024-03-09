@@ -7,7 +7,5 @@ export default {
 
 export const Default = {
   args: undefined,
-  render: () => (
-    <App />
-  ),
+  render: () => <App />,
 };

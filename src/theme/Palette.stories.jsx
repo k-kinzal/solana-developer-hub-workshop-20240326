@@ -1,11 +1,4 @@
-import {
-  Box,
-  Stack,
-  Paper,
-  Typography,
-  useTheme,
-  Grid,
-} from "@mui/material";
+import { Box, Stack, Paper, Typography, useTheme, Grid } from "@mui/material";
 
 export default {
   title: "Theme/Palette",
@@ -56,9 +49,7 @@ const ColorBox = ({ color }) => {
 
 const Variation = ({ color }) => {
   const { palette, spacing } = useTheme();
-  const variations = [
-    50, 100, 200, 300, 400, 500, 600, 700, 800, 900,
-  ];
+  const variations = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900];
   return (
     <Grid container sx={{ width: 1 }}>
       {variations.map((variation) => (
