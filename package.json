@@ -8,13 +8,27 @@
     "build": "vite build",
     "fmt": "npx @biomejs/biome format --write ./src",
     "lint": "npx @biomejs/biome lint ./src",
+    "storybook": "storybook dev -p 6006",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.15.2",
+    "@mui/material": "^5.15.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@storybook/addon-essentials": "^7.6.6",
+    "@storybook/addon-interactions": "^7.6.6",
+    "@storybook/addon-links": "^7.6.6",
+    "@storybook/addon-onboarding": "^1.0.10",
+    "@storybook/blocks": "^7.6.6",
+    "@storybook/react": "^7.6.6",
+    "@storybook/react-vite": "^7.6.6",
+    "@storybook/test": "^7.6.6",
+    "storybook": "^7.6.6",
     "@biomejs/biome": "1.5.1",
     "@types/react": "^18.2.56",
     "@types/react-dom": "^18.2.19",
