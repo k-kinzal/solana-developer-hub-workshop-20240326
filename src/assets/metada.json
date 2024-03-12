@@ -1,7 +1,7 @@
 {
   "name": "Solana Developer Hub Workshop #4",
   "description": "https://github.com/k-kinzal/solana-developer-hub-workshop-20240326",
-  "image": "https://pbs.twimg.com/profile_images/604775377844629504/II85jwYW_400x400.png",
+  "image": "https://github.com/k-kinzal/solana-developer-hub-workshop-20240326/blob/main/src/assets/nft.png?raw=true",
   "external_url": "https://github.com/k-kinzal/solana-developer-hub-workshop-20240326",
   "attributes": [
     {
@@ -16,7 +16,7 @@
   "properties": {
     "files": [
       {
-        "uri": "https://pbs.twimg.com/profile_images/604775377844629504/II85jwYW_400x400.png",
+        "uri": "https://github.com/k-kinzal/solana-developer-hub-workshop-20240326/blob/main/src/assets/nft.png?raw=true",
         "type": "image/png"
       }
     ],
