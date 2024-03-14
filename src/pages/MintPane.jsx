@@ -2,6 +2,7 @@ import { Box, Button, Stack } from "@mui/material";
 import { useUmi } from "../hooks/useUmi.jsx";
 import { generateSigner, percentAmount } from "@metaplex-foundation/umi";
 import { createNft } from "@metaplex-foundation/mpl-token-metadata";
+import {useState} from "react";
 
 /**
  * NFTの名前 を環境変数から取得
@@ -26,6 +27,10 @@ const NFT_IMAGE_URI = import.meta.env.VITE_NFT_IMAGE_URI;
  * NFTのミント機能を提供するコンポーネント
  */
 export const MintPane = () => {
+  // ローディング状態を管理するための状態変数
+  // ミント処理中は true になり、ボタンが無効化される
+  const [loading, setLoading] = useState(false);
+
   // umiオブジェクトを取得
   // umiは、Solanaブロックチェーンとのやりとりに必要な情報を含むオブジェクトです。
   // これには、ウォレットの接続情報、ネットワーク設定、トランザクションの送信に必要な関数などが含まれます。
@@ -33,6 +38,8 @@ export const MintPane = () => {
 
   // NFTをミントするハンドラー関数
   const mintNft = async () => {
+    setLoading(true);
+
     const mint = generateSigner(umi);
     const builder = createNft(umi, {
       mint,
@@ -41,6 +48,8 @@ export const MintPane = () => {
       sellerFeeBasisPoints: percentAmount(0),
     });
     await builder.sendAndConfirm(umi);
+
+    setLoading(false);
   };
 
   return (
@@ -64,7 +73,7 @@ export const MintPane = () => {
         </Box>
         <Box textAlign="center">
           {/* Mintボタンを表示 */}
-          <Button variant="contained" color="secondary" onClick={mintNft}>
+          <Button variant="contained" color="secondary" onClick={mintNft} disabled={loading}>
             Mint
           </Button>
         </Box>
