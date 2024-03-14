@@ -1,11 +1,11 @@
-import { WalletConnetPane } from "./WalletConnetPane";
+import { WalletConnectPane } from "./WalletConnectPane.jsx";
 
 export default {
   title: "Panes/WalletConnetPane",
-  component: WalletConnetPane,
+  component: WalletConnectPane,
 };
 
 export const Default = {
   args: undefined,
-  render: () => <WalletConnetPane />,
+  render: () => <WalletConnectPane />,
 };

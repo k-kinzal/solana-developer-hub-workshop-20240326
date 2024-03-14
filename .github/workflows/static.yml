@@ -38,7 +38,7 @@ jobs:
           node-version-file: .node-version
           cache: npm
       - run: npm ci
-      - run: VITE_RPC_ENDPOINT=https://distinguished-indulgent-cloud.solana-mainnet.quiknode.pro/0235981febe7c704853779da1951dd64811dcd0a/ npm run build
+      - run: npm run build -- --mode production
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

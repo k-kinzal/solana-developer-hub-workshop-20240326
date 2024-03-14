@@ -1,24 +1,52 @@
-import {Box, Button, Stack} from "@mui/material";
-import {useUmi} from "../hooks/useUmi.jsx";
-import {generateSigner, percentAmount} from "@metaplex-foundation/umi";
-import {createNft} from "@metaplex-foundation/mpl-token-metadata";
+import { Box, Button, Stack } from "@mui/material";
+import { useUmi } from "../hooks/useUmi.jsx";
+import { generateSigner, percentAmount } from "@metaplex-foundation/umi";
+import { createNft } from "@metaplex-foundation/mpl-token-metadata";
 
+/**
+ * NFTの名前 を環境変数から取得
+ * @constant {string} NFT_NAME - MintするNFTの名前
+ */
+const NFT_NAME = import.meta.env.VITE_NFT_NAME;
+
+/**
+ * NFTのメタデータのURL を環境変数から取得
+ * @constant {string} NFT_META_URI - MintするNFTのメタデータのURL
+ */
+const NFT_META_URI = import.meta.env.VITE_NFT_META_URI;
+
+/**
+ * NFTの画像のURL を環境変数から取得
+ * @constant {string} NFT_IMAGE_URI - MintするNFTの画像のURL
+ */
+const NFT_IMAGE_URI = import.meta.env.VITE_NFT_IMAGE_URI;
+
+/**
+ * MintPane コンポーネント
+ * NFTのミント機能を提供するコンポーネント
+ */
 export const MintPane = () => {
+  // umiオブジェクトを取得
+  // umiは、Solanaブロックチェーンとのやりとりに必要な情報を含むオブジェクトです。
+  // これには、ウォレットの接続情報、ネットワーク設定、トランザクションの送信に必要な関数などが含まれます。
   const umi = useUmi();
 
-  const onMint = async () => {
-    const mint = generateSigner(umi)
-    const {signature, result} = await createNft(umi, {
+  // NFTをミントするハンドラー関数
+  const mintNft = async () => {
+    const mint = generateSigner(umi);
+    const builder = createNft(umi, {
       mint,
-      name: 'Solana Developer Hub Workshop #4',
-      uri: 'https://raw.githubusercontent.com/k-kinzal/solana-developer-hub-workshop-20240326/main/src/assets/metada.json',
+      name: NFT_NAME,
+      uri: NFT_META_URI,
       sellerFeeBasisPoints: percentAmount(0),
-    }).sendAndConfirm(umi);
-
-    console.log(signature, result);
+    });
+    await builder.sendAndConfirm(umi);
   };
 
   return (
+    // コンポーネントのレンダリング
+    // Box コンポーネントを使用してレイアウトを調整
+    // 中央に Mintする画像 と Mintするボタンを配置
     <Box
       height={1}
       width={1}
@@ -28,12 +56,19 @@ export const MintPane = () => {
     >
       <Stack>
         <Box>
-          <img src="https://pbs.twimg.com/profile_images/604775377844629504/II85jwYW_400x400.png" alt={""}/>
+          {/* NFTの画像を表示 */}
+          <img
+            src={NFT_IMAGE_URI}
+            alt={NFT_NAME}
+          />
         </Box>
         <Box textAlign="center">
-          <Button variant="contained" color="secondary" onClick={onMint}>Mint</Button>
+          {/* Mintボタンを表示 */}
+          <Button variant="contained" color="secondary" onClick={mintNft}>
+            Mint
+          </Button>
         </Box>
       </Stack>
     </Box>
   );
-}
+};
