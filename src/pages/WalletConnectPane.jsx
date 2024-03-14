@@ -1,11 +1,16 @@
 import { Box, Button } from "@mui/material";
 import { useWalletModal } from "@solana/wallet-adapter-react-ui";
+import { useWallet } from "@solana/wallet-adapter-react";
 
 /**
  * WalletConnectPane コンポーネント
  * ウォレット接続のためのUIを提供する
  */
 export const WalletConnectPane = () => {
+  // useWallet フックを使用してウォレットオブジェクトを取得
+  // このオブジェクトにはウォレットの接続状態やアドレスなどの情報が含まれる
+  const { wallet } = useWallet();
+
   // useWalletModal フックから setVisible 関数を取得
   // この関数はウォレットモーダルの表示・非表示を切り替える
   const { setVisible } = useWalletModal();
@@ -23,10 +28,10 @@ export const WalletConnectPane = () => {
     >
       {/*
         "Connect Wallet" ボタン
-        クリック時に onRequestConnectWallet 関数を呼び出す
+        クリック時に ウォレットモーダル を表示する
       */}
       <Button variant="contained" onClick={() => setVisible(true)}>
-        Connect Wallet
+        {wallet?.connected ? "Connected" : "Connect Wallet"}
       </Button>
     </Box>
   );

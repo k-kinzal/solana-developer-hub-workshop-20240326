@@ -1,4 +1,9 @@
 import { Index } from "./Index";
+import {
+  ConnectionProvider,
+  WalletProvider,
+} from "@solana/wallet-adapter-react";
+import { WalletModalProvider } from "@solana/wallet-adapter-react-ui";
 
 export default {
   title: "Pages/Index",
@@ -7,5 +12,13 @@ export default {
 
 export const Default = {
   args: undefined,
-  render: () => <Index />,
+  render: () => (
+    <ConnectionProvider endpoint="https://api.devnet.solana.com">
+      <WalletProvider wallets={[]} autoConnect>
+        <WalletModalProvider>
+          <Index />
+        </WalletModalProvider>
+      </WalletProvider>
+    </ConnectionProvider>
+  ),
 };
