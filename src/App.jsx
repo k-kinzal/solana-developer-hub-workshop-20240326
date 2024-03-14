@@ -15,6 +15,12 @@ import "@solana/wallet-adapter-react-ui/styles.css";
 export const RPC_ENDPOINT = import.meta.env.VITE_RPC_ENDPOINT;
 
 /**
+ * NFTのメタデータのURL を環境変数から取得
+ * @constant {string} NFT_META_URI - MintするNFTのメタデータのURL
+ */
+export const NFT_META_URI = import.meta.env.VITE_NFT_META_URI;
+
+/**
  * アプリケーションの一番上位の部品（コンポーネント）
  * この部品の中に、アプリケーションを構成する他の部品が入ります
  */
