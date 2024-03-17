@@ -47,6 +47,7 @@ export const MintPane = () => {
     });
     const { signature } = await builder.sendAndConfirm(umi);
     setSignature(bs58.encode(signature));
+
     setLoading(false);
   };
 

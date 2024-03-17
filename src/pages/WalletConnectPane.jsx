@@ -15,6 +15,10 @@ export const WalletConnectPane = () => {
   // この関数はウォレットモーダルの表示・非表示を切り替える
   const { setVisible } = useWalletModal();
 
+  const showWalletModal = () => {
+    setVisible(true);
+  }
+
   return (
     // コンポーネントのレンダリング
     // Box コンポーネントを使用してレイアウトを調整
@@ -30,7 +34,7 @@ export const WalletConnectPane = () => {
         "Connect Wallet" ボタン
         クリック時に ウォレットモーダル を表示する
       */}
-      <Button variant="contained" onClick={() => setVisible(true)}>
+      <Button variant="contained" onClick={showWalletModal}>
         {wallet?.connected ? "Connected" : "Connect Wallet"}
       </Button>
     </Box>

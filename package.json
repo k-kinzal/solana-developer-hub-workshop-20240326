@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "init": "cp .env.template .env",
     "dev": "vite",
     "build": "vite build",
     "fmt": "npx @biomejs/biome format --write ./src",
