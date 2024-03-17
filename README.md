@@ -13,6 +13,9 @@ https://lu.ma/dwti8pwv
 
 - GitHubアカウント
     - https://github.com/signup
+- Solanaウォレット
+    - https://note.com/standenglish/n/nbe302b69c559
+    - Phantomの導入例です。記事に記載のDevnetへの接続、Airdropでのトークン取得まで行うとスムーズに進められます
 
 ### 1. ワークショップをはじめる準備をしよう
 
@@ -39,9 +42,40 @@ Create a new forkの画面で何も設定は変更せずに「Create fork」ボ�
 
 ![](https://github.com/k-kinzal/solana-developer-hub-workshop-20240326/assets/163698362/dacd18b5-2a88-4838-8975-0d5720e09e74)
 
-#### 1.2. GitHub Actionsを有効にする
+#### 1.2. GitHub Pagesを有効にする
 
-#### 1.3. GitHub Pagesを有効にする
+GitHub Pagesを使ってコンテンツを公開するため、Pagesの設定を行います。
+まず、タブのSettingsを押してSettingsページを開きましょう。
+
+![](https://github.com/k-kinzal/solana-developer-hub-workshop-20240326/assets/163698362/cd0fae82-2337-46b9-bd86-8fa448fae650)
+
+次の左側のメニューのPagesを押して、Pagesの設定を開きます。
+
+![](https://github.com/k-kinzal/solana-developer-hub-workshop-20240326/assets/163698362/7a9adeae-aed5-458f-a60d-57367b956b02)
+
+Pagesの設定のBuild and deploymentにあるSourceを「Deploy from a branch」から「GitHub Actions」に変更します。
+
+![](https://github.com/k-kinzal/solana-developer-hub-workshop-20240326/assets/163698362/09bf10b4-73ce-4c44-9d03-418140fa03fc)
+![](https://github.com/k-kinzal/solana-developer-hub-workshop-20240326/assets/163698362/2d03e713-1b94-42a4-9dfb-192e8837d82b)
+
+下記のように画面が表示されれば設定完了です。
+
+![](https://github.com/k-kinzal/solana-developer-hub-workshop-20240326/assets/163698362/e895bdab-f5b2-4cb3-8909-3e545252520b)
+
+#### 1.3. GitHub Actionsを有効にする
+
+GitHub Pagesでコンテンツを公開するために、GitHub Actionsを有効にします。
+まず、タブのActionsを押してActionsページを開きましょう。
+
+![](https://github.com/k-kinzal/solana-developer-hub-workshop-20240326/assets/163698362/9712adf7-160c-47ec-abac-e965cb865c79)
+
+Actionsページを開くと有効にしていいのか聞かれるため「I understand my workflows, go ahead and enable them」ボタンを押して、Actionsを有効にします。
+
+![](https://github.com/k-kinzal/solana-developer-hub-workshop-20240326/assets/163698362/76c63b88-3461-4225-b69e-20519a1a6dec)
+
+下記のように画面が表示されれば設定完了です。
+
+![](https://github.com/k-kinzal/solana-developer-hub-workshop-20240326/assets/163698362/8257cc6d-5ab3-4a6f-b4fb-a1534c58810d)
 
 #### 1.4. Codespacesを開く
 
@@ -373,6 +407,26 @@ To https://github.com/k-3278/solana-developer-hub-workshop-20240326
 
 ### 4. GitHub Pagesを確認する
 
+GitHub PagesのURLを確認しましょう。
+タブのSettingを押します。
 
+![](https://github.com/k-kinzal/solana-developer-hub-workshop-20240326/assets/163698362/5c40fb77-db7d-4f53-9832-1096edb0b89d)
+
+Settingタブを開いたら左側のメニューからPagesを選択します。
+
+![](https://github.com/k-kinzal/solana-developer-hub-workshop-20240326/assets/163698362/50a8b529-d9f0-4770-9845-e263a2ff20ba)
+
+Pagesの「Visit Site」ボタンを押してPagesを開きます。
+
+![](https://github.com/k-kinzal/solana-developer-hub-workshop-20240326/assets/163698362/354f9c48-e05d-48d3-b576-2ef1c594b196)
+
+下記のようにページを開けたら成功です。
+
+![](https://github.com/k-kinzal/solana-developer-hub-workshop-20240326/assets/163698362/79beeaf8-616f-44f1-b985-ce9b2a4150c2)
+
+ここまでできたらXに [#SolDevHub](https://twitter.com/search?q=%23SolDevHub&src=typed_query&f=live) というハッシュタグをつけてURLをシェアしましょう。
+
+注意点としてPagesに公開したページはSolanaネットワークのMainnet-Betaと接続しています。
+実際にMintするにはSOLが必要になるため、実際に動かしたい婆には取引所などからSOLを手に入れてください。
 
 ### 5. (Optional) いろいろなNFTを発行してみよう
