@@ -439,9 +439,22 @@ Pagesの「Visit Site」ボタンを押してPagesを開きます。
 Theme設定に関して詳しくはは下記のMUIのドキュメントを参照してください。
 - [https://mui.com/material-ui/customization/default-theme/](https://mui.com/material-ui/customization/default-theme/)
 
-#### 5.2. Candy Machineを使ってガチャをできるようにしてみよう
+#### 5.2. 画像やメタデータを別のところに保存してみよう
 
-MetaplexのCandy Machineを使うとMintさいに事前に設定した複数のNFTから1つだけ発行する仕組みを作ることができます。
+発行しているNFTの画像やメタデータはGitHubで管理しています。
+しかし、GitHubのリポジトリを削除したり、GitHubが停止するとアクセスできなくなってしまいます。
+
+そこで、MetaplexのUploaderという機能を使い、別の場所に画像やメタデータを保存できるようにしてみましょう。
+
+- [https://www.npmjs.com/package/@metaplex-foundation/umi-uploader-nft-storage](https://www.npmjs.com/package/@metaplex-foundation/umi-uploader-nft-storage)
+- [https://www.npmjs.com/package/@metaplex-foundation/umi-uploader-bundlr](https://www.npmjs.com/package/@metaplex-foundation/umi-uploader-bundlr)
+- [https://www.npmjs.com/package/@metaplex-foundation/umi-uploader-irys](https://www.npmjs.com/package/@metaplex-foundation/umi-uploader-irys)
+- [https://www.npmjs.com/package/@metaplex-foundation/umi-uploader-aws](https://www.npmjs.com/package/@metaplex-foundation/umi-uploader-aws)
+
+#### 5.3. Candy Machineを使ってガチャをできるようにしてみよう
+
+MetaplexのCandy Machineを使うとMintさいに事前に設定した複数のNFTから1つだけをMintする仕組みを作ることができます。
+常に同じのではなくMintする度に変わるNFTを作ってみましょう。
 
 Candy Machineに関して詳しくは下記のMetaplexのドキュメントを参照してください。
 - [https://developers.metaplex.com/candy-machine](https://developers.metaplex.com/candy-machine)
