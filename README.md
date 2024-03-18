@@ -429,4 +429,19 @@ Pagesの「Visit Site」ボタンを押してPagesを開きます。
 注意点としてPagesに公開したページはSolanaネットワークのMainnet-Betaと接続しています。
 実際にMintするにはSOLが必要になるため、実際に動かしたい婆には取引所などからSOLを手に入れてください。
 
-### 5. (Optional) いろいろなNFTを発行してみよう
+### 5. (Optional) 自分だけのNFT発行をしてみよう
+
+#### 5.1. Themeを変えてみよう
+
+`src/theme/pallete.js`を変更すると各種色を変更することができます。
+好きな色に変更して、独自のNFTのMint画面を作ってみましょう。
+
+Theme設定に関して詳しくはは下記のMUIのドキュメントを参照してください。
+- [https://mui.com/material-ui/customization/default-theme/](https://mui.com/material-ui/customization/default-theme/)
+
+#### 5.2. Candy Machineを使ってガチャをできるようにしてみよう
+
+MetaplexのCandy Machineを使うとMintさいに事前に設定した複数のNFTから1つだけ発行する仕組みを作ることができます。
+
+Candy Machineに関して詳しくは下記のMetaplexのドキュメントを参照してください。
+- [https://developers.metaplex.com/candy-machine](https://developers.metaplex.com/candy-machine)
