@@ -17,7 +17,7 @@ export const WalletConnectPane = () => {
 
   const showWalletModal = () => {
     setVisible(true);
-  }
+  };
 
   return (
     // コンポーネントのレンダリング
