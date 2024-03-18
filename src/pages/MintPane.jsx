@@ -36,19 +36,7 @@ export const MintPane = () => {
 
   // NFTをミントするハンドラー関数
   const mintNft = async () => {
-    setLoading(true);
 
-    const mint = generateSigner(umi);
-    const builder = createNft(umi, {
-      mint,
-      name: metadata.name,
-      uri: NFT_META_URI,
-      sellerFeeBasisPoints: percentAmount(0),
-    });
-    const { signature } = await builder.sendAndConfirm(umi);
-    setSignature(bs58.encode(signature));
-
-    setLoading(false);
   };
 
   return (
