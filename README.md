@@ -5,8 +5,6 @@ https://lu.ma/dwti8pwv
 - 開催場所: 東京
 - 時間: 3月26日火曜日 19:00 - 20:30 (18:30 入場開始)
 
-## 作るもの
-
 ## ワークショップコンテンツ
 
 ### 必要なもの
@@ -19,10 +17,8 @@ https://lu.ma/dwti8pwv
 
 ### 1. ワークショップをはじめる準備をしよう
 
-本ワークショップではCodespaceを利用します。
-
-わかる方はローカルにcloneしても構いません。
-その場合は、事前にnode/npmの実行環境を構築の上、1.1〜1.2をスキップして1.3から始めてください。
+本ワークショップではGitHub Codespaceを利用して開発を行い、GitHub Pagesでコンテンツの公開、GitHub Actionsでデプロイを行います。
+これらの設定を行っていきましょう。
 
 #### 1.1. GitHubリポジトリをforkしよう
 
@@ -458,3 +454,19 @@ MetaplexのCandy Machineを使うとMintさいに事前に設定した複数のN
 
 Candy Machineに関して詳しくは下記のMetaplexのドキュメントを参照してください。
 - [https://developers.metaplex.com/candy-machine](https://developers.metaplex.com/candy-machine)
+
+## 関連リンク
+
+今回利用している技術のリンクです。
+より、知識を深めたい方は目を通すことをおすすめします。
+
+- [https://developer.mozilla.org/ja/docs/Web/JavaScript](https://developer.mozilla.org/ja/docs/Web/JavaScript)
+- [https://ja.vitejs.dev/](https://ja.vitejs.dev/)
+- [https://biomejs.dev/ja/](https://biomejs.dev/ja/)
+- [https://mui.com/](https://mui.com/)
+- [https://storybook.js.org/](https://storybook.js.org/)
+- [https://solana.com/docs](https://solana.com/docs)
+- [https://solana.com/docs/clients/javascript-reference](https://solana.com/docs/clients/javascript-reference)
+- [https://github.com/anza-xyz/wallet-adapter](https://github.com/anza-xyz/wallet-adapter)
+- [https://developers.metaplex.com/token-metadata](https://developers.metaplex.com/token-metadata)
+- [https://developers.metaplex.com/umi](https://developers.metaplex.com/umi)
