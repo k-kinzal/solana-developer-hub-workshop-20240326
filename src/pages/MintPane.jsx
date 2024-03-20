@@ -58,7 +58,7 @@ export const MintPane = () => {
           CardMediaのaspectRationは設定した画像のアスペクト比を指定する（e.g. "16 / 9 auto", "1 / 1 auto", "4 / 3 auto"）
         */}
         <CardMedia
-          sx={{ aspectRatio: "1 / 1 auto" }}
+          sx={{ aspectRatio: "1 / 1 auto", width: "345px" }}
           image={metadata.image}
           title={metadata.name}
         />
