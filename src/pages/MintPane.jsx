@@ -84,7 +84,7 @@ export const MintPane = () => {
           {signature !== null && (
             <Button
               size="small"
-              href={`https://explorer.solana.com/tx/${signature}`}
+              href={`https://explorer.solana.com/tx/${bs58.encode(signature)}`}
               target="_blank"
             >
               View Transaction

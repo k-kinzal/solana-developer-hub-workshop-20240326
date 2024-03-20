@@ -293,7 +293,6 @@ To https://github.com/k-3278/solana-developer-hub-workshop-20240326
   ...
   
   const mintNft = async () => {
-     setLoading(true);
      const builder = createNft(umi, {
        generateSigner(umi),
        name: metadata.name,
@@ -301,9 +300,7 @@ To https://github.com/k-3278/solana-developer-hub-workshop-20240326
        sellerFeeBasisPoints: percentAmount(0),
      });
      const { signature } = await builder.sendAndConfirm(umi);
-
 +     setSignature(signature);
-     setLoading(false);
   };
 ```
 
