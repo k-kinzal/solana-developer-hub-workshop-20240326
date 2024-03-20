@@ -373,7 +373,7 @@ Pagesの「Visit Site」ボタンを押してPagesを開きます。
 
 ![](https://github.com/k-kinzal/solana-developer-hub-workshop-20240326/assets/163698362/354f9c48-e05d-48d3-b576-2ef1c594b196)
 
-下記のようにページを開けたら成功です。
+下記のようにページを開けたら成功です。実際にMintして遊んでみましょう。
 
 ![](https://github.com/k-kinzal/solana-developer-hub-workshop-20240326/assets/163698362/79beeaf8-616f-44f1-b985-ce9b2a4150c2)
 
