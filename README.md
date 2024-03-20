@@ -299,7 +299,7 @@ UIを整える意味で少しコードを変更してみましょう。
 +     setLoading(true);
 +
      const builder = createNft(umi, {
-       generateSigner(umi),
+       mint: generateSigner(umi),
        name: metadata.name,
        uri: NFT_META_URI,
        sellerFeeBasisPoints: percentAmount(0),
