@@ -5,26 +5,22 @@ import {
   CardActions,
   CardContent,
   CardMedia,
-  Stack,
   Typography,
 } from "@mui/material";
 import { useUmi } from "../hooks/useUmi.jsx";
 import { generateSigner, percentAmount } from "@metaplex-foundation/umi";
 import { createNft } from "@metaplex-foundation/mpl-token-metadata";
-import { useState } from "react";
+import React, { useState } from "react";
 import bs58 from "bs58";
 import metadata from "../assets/metada.json";
 import { NFT_META_URI } from "../App.jsx";
+import {LoadingButton} from "../components/LoadingButton.jsx";
 
 /**
  * MintPane コンポーネント
  * NFTのミント機能を提供するコンポーネント
  */
 export const MintPane = () => {
-  // ローディング状態を管理するための状態変数
-  // ミント処理中は true になり、ボタンが無効化される
-  const [loading, setLoading] = useState(false);
-
   // シグネチャを管理するための状態変数
   // ミント処理が成功した場合に、シグネチャがセットされる
   const [signature, setSignature] = useState(null);
@@ -75,15 +71,14 @@ export const MintPane = () => {
         <CardActions sx={{ justifyContent: "center" }}>
           {/* 署名がない場合はMintボタンを表示 */}
           {signature === null && (
-            <Button
+            <LoadingButton
               variant="contained"
               color="secondary"
               size="small"
               onClick={mintNft}
-              disabled={loading}
             >
               Mint
-            </Button>
+            </LoadingButton>
           )}
           {/* 署名がある場合はトランザクションへのリンクを表示 */}
           {signature !== null && (

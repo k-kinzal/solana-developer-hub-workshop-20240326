@@ -285,46 +285,6 @@ To https://github.com/k-3278/solana-developer-hub-workshop-20240326
 
 `createNft`でNFTを作成する準備をします。その後に`sendAndConfirm`でSolanaネットワークに送信することでNFTを作成することができます。
 
-この状態で開発用サーバーで「MINT」ボタンを押すとNFTをMintできますが、Mint中でも何回もMintできたり、Mint完了したことがわかりにくいです。
-UIを整える意味で少しコードを変更してみましょう。
-
-まずは1回だけMintできるようにします。
-
-```diff
-  const [loading, setLoading] = useState(false);
-  
-  ...
-  
-  const mintNft = async () => {
-+     setLoading(true);
-+
-     const builder = createNft(umi, {
-       mint: generateSigner(umi),
-       name: metadata.name,
-       uri: NFT_META_URI,
-       sellerFeeBasisPoints: percentAmount(0),
-     });
-     const { signature } = await builder.sendAndConfirm(umi);
-+
-+     setLoading(false);
-  };
-```
-
-Reactの機能を使って「MINT」ボタンを押したさいに、`loading`という状態を`true`に変え、Mintに成功したら`false`に変えます。
-こうすることで`Button`の`disabled={loading}`で`disabled`の値が変わり、Mint中はボタンを押せなくなります。
-
-```html
-<Button
-  variant="contained"
-  color="secondary"
-  size="small"
-  onClick={mintNft}
-  disabled={loading}
->
-  Mint
-</Button>
-```
-
 次にMintが完了したさいに`signature`という状態をMintを実行したトランザクションのシグネチャに変えます。
 
 ```diff
