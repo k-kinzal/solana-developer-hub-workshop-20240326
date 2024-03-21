@@ -380,7 +380,7 @@ Pagesの「Visit Site」ボタンを押してPagesを開きます。
 ここまでできたらXに [#SolDevHub](https://twitter.com/search?q=%23SolDevHub&src=typed_query&f=live) というハッシュタグをつけてURLをシェアしましょう。
 
 注意点としてPagesに公開したページはSolanaネットワークのMainnet-Betaと接続しています。
-実際にMintするにはSOLが必要になるため、実際に動かしたい婆には取引所などからSOLを手に入れてください。
+実際にMintするにはSOLが必要になるため、実際に動かしたい場合には取引所などからSOLを手に入れてください。
 
 ### 5. (Optional) 自分だけのNFT発行をしてみよう
 
