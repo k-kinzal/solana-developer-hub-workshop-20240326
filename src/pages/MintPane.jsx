@@ -12,7 +12,7 @@ import { generateSigner, percentAmount } from "@metaplex-foundation/umi";
 import { createNft } from "@metaplex-foundation/mpl-token-metadata";
 import React, { useState } from "react";
 import bs58 from "bs58";
-import metadata from "../assets/metada.json";
+import metadata from "../assets/metadata.json";
 import { NFT_META_URI } from "../App.jsx";
 import {LoadingButton} from "../components/LoadingButton.jsx";
 
