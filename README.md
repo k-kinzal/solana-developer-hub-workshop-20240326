@@ -274,7 +274,7 @@ To https://github.com/k-3278/solana-developer-hub-workshop-20240326
 ```diff
   const mintNft = async () => {
 +     const builder = createNft(umi, {
-+       generateSigner(umi),
++       mint: generateSigner(umi),
 +       name: metadata.name,
 +       uri: NFT_META_URI,
 +       sellerFeeBasisPoints: percentAmount(0),
